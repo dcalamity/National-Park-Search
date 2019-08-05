@@ -4,11 +4,18 @@
   
   const apiKey= 'spSzwyMegX2P7akcLWa88v3SMHBtdZmw5defzeIx';
 
-  // function displayResults(responsejson){
-  //   $('#results-list').empty();
-    
-  //   for (let i = 0; i < responsejson.)
-  // }
+  function displayResults(responsejson){
+    $('#results-list').empty();
+    console.log(responsejson)
+    for (let i = 0; i < responsejson.data.length; i++){
+      $('#results-list').append(
+        `<li><h3>${responsejson.data[i].fullName}</h3>
+        <p>${responsejson.data[i].description}</p>
+        <p>${responsejson.data[i].url}</p>`
+      )}
+      $('#results').removeClass('hidden');
+    }
+  
 
   function formatQueryParams(params){
     const queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
@@ -35,7 +42,7 @@
       })
       .then(responsejson =>
         displayResults(responsejson));
-      console.log(responsejson);
+        //console.log(responsejson);
       // .catch(err => {
       //   alert(err.message);
       // })
