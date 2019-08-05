@@ -18,9 +18,13 @@
         <label for="state_search">State</label>
         <input type="text" name="state_search" id="state-search" required>
         <label for="repo-list">Number of Results</label>
-        <input type="text" name="results" id="numResults" required>
+        <input type="number" name="results" id="numResults" value=10 required>
         <input type="submit" value="Search">
       </form>
+      <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <ul id="results-list"></ul>
+        </section>
     </div>
     <script src="index.js"></script>
   </body>
