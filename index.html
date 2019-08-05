@@ -3,10 +3,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>National Park Search</title>
-    <meta name="description" content="">
+    <meta name="description" content="NationalParkSearch">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="scontainer">
+      <h1>Lets start your search!</h1>
+      <form>
+        <label for="state_search">State</label>
+        <input type="text" name="state_search" id="state-search" required>
+        <label for="repo-list">Number of Results</label>
+        <input type="text" name="results" id="numResults" required>
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
